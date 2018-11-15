@@ -1,0 +1,39 @@
+<!--
+   home.html
+
+-->
+
+<html>
+  <head>
+    <title>Live Streaming</title>
+    <link rel="stylesheet" href='../static/style.css'/>
+	<script type=text/javascript src="{{url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+  	<h1>Live Streaming</h1>
+    <table id="mainTable">
+		<tr>
+			<div>
+        		<img id="streamFrm" src="{{ url_for('stream') }}" width="800" height="500" alt=""/>
+    		</div>
+		</tr>
+		<tr>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+				<input placeholder="Введите имя" id="nameValue">
+			</td>
+			<td id="switchBox">
+				<button id="changebtn" hidden="hidden">Начать съемку </button>
+				<button id="trainbtn" hidden="hidden">Начать работу</button>
+				<input id="passValue" hidden="hidden" type="password">
+				<button id="adminbtn" hidden="hidden">Очистить данные</button>
+			</td>
+		</tr>
+    </table>
+    <hr>
+    <p> </p>
+  </body>
+</html>
